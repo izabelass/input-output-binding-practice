@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 export interface Book {
   id: number;
@@ -22,20 +22,22 @@ export interface Card {
   styleUrls: ['./first-child.component.scss']
 })
 export class FirstChildComponent implements OnInit {
-  //primeiro exemplo
+  //primeiro exemplo Input
   @Input() name: string = '';
 
-  //segundo exemplo
+  //segundo exemplo Input
   @Input() lastName: string = '';
 
-  //terceiro exemplo
+  //terceiro exemplo Input
   @Input() weekDays: string[] = [];
 
-  //quarto exemplo
+  //quarto exemplo Input
   @Input() books: Book[] = [];
 
-  //quinto exemplo
+  //quinto exemplo Input
   @Input() cards: Card[] = [];
+
+ 
 
   constructor() { }
 

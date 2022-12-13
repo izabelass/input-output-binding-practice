@@ -1,24 +1,26 @@
 <div class="container">
-<!-- primeiro exemplo -->
+<!-- primeiro exemplo Input -->
 <br>
 <h1>Primeiro exemplo utilizando Input()</h1>
 <p>Seja bem vindo, {{name}}</p>
 
-<!-- segundo exemplo -->
+<!-- segundo exemplo Input -->
 <br>
 <h1>Segundo exemplo utilizando Input()</h1>
 <p>Seja bem vindo, Sra. {{lastName}}</p>
 
-<!-- terceiro exemplo -->
+<!-- terceiro exemplo Input -->
 <br>
 <h1>Terceiro exemplo utilizando Input()</h1>
+<h2>Utilizando o nfFor para preencher uma tabela com os valores de um array de strings</h2>
 <ul *ngFor="let day of weekDays">
     <li>{{day}}</li>
 </ul>
 
-<!-- quarto exemplo -->
+<!-- quarto exemplo Input -->
 <br>
 <h1>Quarto exemplo utilizando Input()</h1>
+<h2>Utilizando o nfFor para preencher uma tabela com os valores de um array de objetos</h2>
 <table>
     <tr>
         <th>Id</th>
@@ -34,9 +36,10 @@
     </tr>
 </table>
 
-<!-- quinto exemplo -->
+<!-- quinto exemplo Input -->
 <br>
 <h1>Quinto exemplo utilizando Input()</h1>
+<h2>Utilizando o nfFor para preencher dados de um card com os valores de um array de objetos</h2>
 <div class="container">
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col" *ngFor="let card of cards">
