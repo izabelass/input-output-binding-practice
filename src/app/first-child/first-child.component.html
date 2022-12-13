@@ -1,0 +1,56 @@
+<div class="container">
+<!-- primeiro exemplo -->
+<br>
+<h1>Primeiro exemplo utilizando Input()</h1>
+<p>Seja bem vindo, {{name}}</p>
+
+<!-- segundo exemplo -->
+<br>
+<h1>Segundo exemplo utilizando Input()</h1>
+<p>Seja bem vindo, Sra. {{lastName}}</p>
+
+<!-- terceiro exemplo -->
+<br>
+<h1>Terceiro exemplo utilizando Input()</h1>
+<ul *ngFor="let day of weekDays">
+    <li>{{day}}</li>
+</ul>
+
+<!-- quarto exemplo -->
+<br>
+<h1>Quarto exemplo utilizando Input()</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Year</th>
+    </tr>
+    <tr *ngFor="let book of books">
+        <td>{{book.id}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.year}}</td>
+    </tr>
+</table>
+
+<!-- quinto exemplo -->
+<br>
+<h1>Quinto exemplo utilizando Input()</h1>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col" *ngFor="let card of cards">
+            <div class="card" style="width: 80%;">
+                <img src={{card.srcImage}} class="card-img-top" style="height: 10rem;" alt={{card.altImage}}>
+                <div class="card-body">
+                    <h5 class="card-title">{{card.title}}</h5>
+                    <p class="card-text">{{card.text}}</p>
+                    <a href={{card.hrefLink}} class="btn btn-primary">{{card.textLink}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
