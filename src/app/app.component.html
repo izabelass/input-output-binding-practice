@@ -1,9 +1,33 @@
 <app-first-child 
-  name="Izabela" 
+  name="Michelle" 
   [lastName]="currentLastName"
   [weekDays]="daysOfWeek"
   [books]="existingBooks"
   [cards]="existingCards"
+  (newItemEvent)="addItem($event)"
 >
 </app-first-child>
+
+<!-- primeiro exemplo Output -->
+<div class="container"><br>
+  <h4>O ngFor itera sobre o array items. 
+    Quando um valor é adicionado no input do first-child e o botão é clicado, 
+    o componente filho (first-child) emite o evento e o metodo addItem() do componente pai (app)
+    empurra o valor do input para o array items e o novo item renderiza na lista</h4><br>
+  <ul>
+    <li *ngFor="let item of items">{{item}}</li>
+  </ul>
+</div>
+
+<app-second-child
+  [parentCount]="parentCount"
+  (valueChangeEvent)="displayCounter($event)"
+>
+</app-second-child>
+<div class="container">
+  <br>
+  <h5>Contador: {{parentCount}}</h5>
+</div>
+
+
 

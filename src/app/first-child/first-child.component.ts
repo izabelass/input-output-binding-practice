@@ -37,11 +37,20 @@ export class FirstChildComponent implements OnInit {
   //quinto exemplo Input
   @Input() cards: Card[] = [];
 
- 
+
+  //primeiro exemplo Output
+  @Output() newItemEvent = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  //primeiro exemplo Output
+  //raise an event with the value the user types into the <input>
+  addNewItem(value: string) {
+    this.newItemEvent.emit(value);
+  }
+
 
 }

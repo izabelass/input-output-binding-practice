@@ -7,13 +7,13 @@ import { Book, Card } from './first-child/first-child.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  //segundo exemplo
-  currentLastName: string = 'Soares';
+  //segundo exemplo Input
+  currentLastName: string = 'Obama';
 
-  //terceiro exemplo
+  //terceiro exemplo Input
   daysOfWeek: string[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
-  //quarto exemplo
+  //quarto exemplo Input
   existingBooks: Book[] = [
     {id: 1, name: "Minha História", author: "Michelle Obama", year:2018},
     {id: 2, name: "Torto Arado", author: "Itamar Vieira Junior", year:2019},
@@ -21,7 +21,7 @@ export class AppComponent {
     {id: 4, name: "O Lugar", author: "Annie Ernaux", year:2021},
   ];
 
-  //quinto exemplo
+  //quinto exemplo Input
   existingCards: Card[] = [
     {
       srcImage: "https://cdn.pixabay.com/photo/2016/02/10/21/59/landscape-1192669__480.jpg",
@@ -57,4 +57,18 @@ export class AppComponent {
     },
 
   ];
+
+  //primeiro exemplo Output
+  items = ["item1", "item2", "item3", "item4"];
+
+  addItem(newItem: string) {
+    this.items.push(newItem);
+  }
+
+  //primeiro exemplo Input e Output (vindo do second-child)
+  parentCount = 0;
+
+  displayCounter(count: number) {
+    this.parentCount = count;
+  }
 }

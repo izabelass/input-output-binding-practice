@@ -12,7 +12,7 @@
 <!-- terceiro exemplo Input -->
 <br>
 <h1>Terceiro exemplo utilizando Input()</h1>
-<h2>Utilizando o nfFor para preencher uma tabela com os valores de um array de strings</h2>
+<h2>Utilizando o ngFor para preencher uma tabela com os valores de um array de strings</h2>
 <ul *ngFor="let day of weekDays">
     <li>{{day}}</li>
 </ul>
@@ -20,7 +20,7 @@
 <!-- quarto exemplo Input -->
 <br>
 <h1>Quarto exemplo utilizando Input()</h1>
-<h2>Utilizando o nfFor para preencher uma tabela com os valores de um array de objetos</h2>
+<h2>Utilizando o ngFor para preencher uma tabela com os valores de um array de objetos</h2>
 <table>
     <tr>
         <th>Id</th>
@@ -39,8 +39,8 @@
 <!-- quinto exemplo Input -->
 <br>
 <h1>Quinto exemplo utilizando Input()</h1>
-<h2>Utilizando o nfFor para preencher dados de um card com os valores de um array de objetos</h2>
-<div class="container">
+<h2>Utilizando o ngFor para preencher dados de um card com os valores de um array de objetos</h2>
+<div class="container my-5">
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col" *ngFor="let card of cards">
             <div class="card" style="width: 80%;">
@@ -54,6 +54,13 @@
         </div>
     </div>
 </div>
+
+<!-- primeiro exemplo Output -->
+<h1>Primeiro exemplo utilizando Output()</h1>
+<h2>Passando valor inserido no input #newItem para o array de items e renderizando o resultado no componente pai.</h2><br>
+<label for="item-input">Add an item:</label>
+<input type="text" id="item-input" #newItem>
+<button type="button" (click)="addNewItem(newItem.value)">Add to parent's list</button>
 
 </div>
 
